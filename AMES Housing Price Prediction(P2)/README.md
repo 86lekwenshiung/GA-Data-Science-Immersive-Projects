@@ -15,7 +15,7 @@ Problem Statement
 
 ## Table of contents
 * [General info](#general-info)
-* [Technologies](#technologies)
+* [Technologies](#3.0-Data-Dictionary)
 * [Setup](#setup)
 
 ## General info
