@@ -1,4 +1,4 @@
-# Project 2 - Ames Housing Data and Kaggle Challenge
+# Project 2 - Ames Housing Data and Kaggle Challenge (Work In Progress)
 
 ___
 Problem Statement
@@ -14,92 +14,100 @@ Problem Statement
 
 
 ## Table of contents
-* [General info](#general-info)
-* [Technologies](#3.0-Data-Dictionary)
-* [Setup](#setup)
+* [Fast Fact on Ames City](#General-Info)
+* [Datasets](#Data-Dictionary)
+* [Regression Models](#Model)
+* [Model's Result Summary](#Summary)
+* [Key Observation](#Observation)
+* [Application on Models on Client's Case Study](#Application)
+* [Conclusion & Next Step](#Conclusion]
+
+<a name = 'General-Info'></a>
+## Fast Fact on Ames
 
 
-## General info
-This project is simple Lorem ipsum dolor generator.
-
+<a name = 'Data-Dictionary'></a>
+## Datasets and Data Dictionary
 ___
-## 2.0 Datasets and Additional resources
----
 The data used for this project are from the following sources:
 
-- 2017 to 2019 SAT Datasets by States
-- 2017 to 2018 ACT Datasets by States
-- https://www.census.gov/topics/income-poverty.html
-- https://worldpopulationreview.com/state-rankings/average-income-by-state
-- https://www.census.gov/library/visualizations/interactive/2019-median-household-income.html
-- https://fred.stlouisfed.org/release/tables?eid=259515&rid=249#
-- https://www.collegeraptor.com/getting-in/articles/act-sat/states-act-sat-given-free/
-- https://mindfish.com/which-states-require-the-sat/
-- https://www.statology.org/what-is-a-strong-correlation/
+- DataSet :
+- Data Dictionary:
+- Training Dataset
+- Test Dataset
+- Additional Dataset for Feature Prediction
 
-<a name="3.0-Data-Dictionary"></a>
-## 3.0 Data Dictionary
----
-|Feature|Type|Dataset|Description|
-|---|---|---|---|
-|State|index|SAT/ACT|State names for 50 states in the US, plus District of Columbia|
-|sat_pr_2017|float|SAT|State-wide participation rate (%) in 2017| 
-|sat_erbw_2017|int|SAT|State mean score for Evidence-Based Reading and Writing (ERW) in 2017|
-|sat_math_2017|int|SAT|State mean score for Math in 2017|
-|sat_total_2017|int|SAT|State mean total (combined score for ERW and Math) in 2018|
-|sat_pr_2018|float|SAT|State-wide participation rate (%) in 2018| 
-|sat_erbw_2018|int|SAT|State mean score for Evidence-Based Reading and Writing (ERW) in 2018|
-|sat_math_2018|int|SAT|State mean score for Math in 2018|
-|sat_total_2018|int|SAT|State mean total (combined score for ERBW and Math) in 2018|
-|sat_pr_2019|float|SAT|State-wide participation rate (%) in 2019| 
-|sat_erbw_2019|int|SAT|State mean score for Evidence-Based Reading and Writing (ERBW) in 2019|
-|sat_math_2019|int|SAT|State mean score for Math in 2019|
-|sat_total_2019|int|SAT|State mean total (combined score for ERBW and Math) in 2019|
-||
-|act_pr_2017|float|ACT|State-wide participation rate (%) in 2017| 
-|act_total_2017|float|ACT|State mean composite score (average score for English, Math, Reading, and Science) in 2017|
-|act_pr_2018|float|ACT|State-wide participation rate (%) in 2018| 
-|act_total_2018|float|ACT|State mean composite score (average score for English, Math, Reading, and Science) in 2018|
-|act_pr_2019|float|ACT|State-wide participation rate (%) in 2019| 
-|act_total_2019|float|ACT|State mean composite score (average score for English, Math, Reading, and Science) in 2019|
-||
-|2019 Household Median Income|float|State|2019 Median Household Income by US States| 
-|2019 Household Ranking|float|State|2019 Median Household Income Ranking by US States. No.1 has highest median household income|
-|2019 Gini Coeff|float|State|2019 Gini Coefficient by US States| 
-|2019 Gini Ranking|float|State|2019 Gini Coeff Ranking by US States. No.1 has lowest Gini Coeff.|
-|2019 Poverty Rate|float|State|2019 Poverty Rate in % by US States| 
-
+<a name = 'Model'></a>
+## Regression Models
 ___
-## 4.0 General Summary of Findings
----
-**Participation Rate (PR)**
-* 100% SAT participation rates for 3 states and 100% ACT participation rates for 13 states from 2017 : 2019. Most of these states are inside the mandatory SAT and ACT rules respectively.
-* General trend that states that have high PR in one test will have a lower PR in another test. For example, a state that has high PR in SAT will have low PR in ACT. This trend make sense as well, since usually students are only required to take either or. **See section 3.2 for the supporting graph visualisation**
-* 3 States (Florida , Georgia , Hawaii) had >50% participation rate for both test in 2017. 5 States (Florida , Georgia , Hawaii , North and South Carolina) achieved that in 2018. Georgia fall below the 50% mark for ACT in 2019
-* Colorado appear to have a change in mandatory from ACT in 2017 to SAT in 2018
+* Linear Regression
+* Lasso Regression
+* Ridge Regression
+* ElasticNet
+* Random Forest Regression
+
+<a name = 'Summary'></a>
+## Model's Result Summary
 ___
 
-**Score**
-* States are usually specialised in scoring well in one of the test ; There is no State that score well in both SAT ands ACT. **See section 3.1 scatter plot for suppporting graph visualisation**
-* New Hampshire , Massachusetts , Connecticut have consistently top the ACT score from 2017 to 2019
-* South Carolina , Mississippi , Nevada have consistently bottom the ACT score from 2017 to 2019
+* Include qualitative intepretation of these many decimal number
+|  | LR Score | Lasso Score | Ridge Score | Elastic Net | RandomForest Score |
+|---:|---:|---:|---:|---:|---:|
+| Training MAE | 0.076062 | 0.109778 | 0.076030 | 0.109778 | 0.036248 |
+| Validation MAE | 0.078828 | 0.106090 | 0.077622 | 0.106090 | 0.075616 |
+| Training RMSE | 0.104159 | 0.152725 | 0.104681 | 0.152725 | 0.052925 |
+| Validation RMSE | 0.103474 | 0.147447 | 0.102304 | 0.147447 | 0.104506 |
+| Training Model Score | 0.931745 | 0.853255 | 0.931058 | 0.853255 | 0.982378 |
+| Validation Model Score | 0.924523 | 0.846741 | 0.926221 | 0.846741 | 0.923011 |
+
+<a name = 'Observation'></a>
+## Key Observation from Analysis
 ___
 
-**Score and Participation Rate (PR) Relationship**
-* PR have an inverse relation with Score. Lower Participation rate in a test , generally have a better score. This could be due to the possible reasoning that these participants are taking additional tests as secondary supplement, and since they are competetive in personal nature, they tend to work harder and score better. Furthuermore, there will also be lesser non-motivated people to dilute the score. **See Section 3.3 for the supporting graph visualisation**
+* To list down key features from
+
+<a name = 'Observation'></a>
+## Application on Models on Client's Case Study
 ___
 
-## 5.0 Specific Finding and recommendation with relation to Median HouseHold Income
+* To list down how to use the model to predict
+* what feature we used.
+* how to interpret
+
+<a name = 'Conclusion'></a>
+## Conclusion & Next Step
 ___
+* Actual Qualitative Application
+    1. In the `Section 6.0` Example , we were able to use our client baseline house condition, together with our Model to demostrate how variation of the feature affect the Sale Price. From `Section 6.2` , we had demostrate that if Alan (our client) were to renovate and improve his house condition from 5 to 7 , we predict he should be able to increase his Sale Price from `$270,000` to `$292,000` , a 8% potential increase.
+    2. Overall , we were able to generate a model to advise our client what house features they could improve , and the qualitative correlation to the Sale Price. We could use our model to run on multiple features that had demostrated strong relation as demostrated in `Section 6.2` and `Section 6.3`
+    3. We had also reached our model's target to be able to advise our client on what action to take on their house so that they are able to increase their selling price by 5% to 10%.
 
-By doing a systematic zoom-in on the effect of household income on the test score, we summarised our key insights as below :
-
-### Key Insights
-1. Base on correlation heatmap , poverty rate and household median income has a moderately strong impact on ACT score (~0.6). Since Poverty Rate and household income strong correlation with each other, we will take 1 of these 2 to further study into the score and PR.
-2. It is observed that Household Income had a relatively strong correlation with the ACT score , but not the SAT score.
-3. Consider all State , based on the bottom 12 median income state, only 1/12 state score above the 25% for ACT while 9/12 state score above the 25% percentile for SAT. Consider only non-mandatory state , based on the bottom 5 median income state, only 4/5 state score above the 25% for ACT while 1/5 state score above the 25% percentile for SAT.
-4. Out of the 12 least median household income state , 9 out of 12 states had high PR in ACT.
+* Next Step
+    * `While we are able to predict qualitatively , we should also take into account that to improve a house feature, renovation budget will be required. Whether that outweighs the increase of SalePrice is not covered in this studies and could be further studies together with interior design team.`
 
 
-### Recommendation
-Based on limited resources , the government should focus on fininicial aid to lower median household in Mississippi , Arkansas , Louisiana , Alabama, Kentucky , Oklahoma aiming to take ACT so that the state can aim to increase their score toward the 25% score percentile by 2021
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
