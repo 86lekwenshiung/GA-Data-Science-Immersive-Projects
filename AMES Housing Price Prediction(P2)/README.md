@@ -18,6 +18,7 @@ Problem Statement
 * [Technologies](#3.0-Data-Dictionary)
 * [Setup](#setup)
 
+
 ## General info
 This project is simple Lorem ipsum dolor generator.
 
@@ -36,7 +37,7 @@ The data used for this project are from the following sources:
 - https://mindfish.com/which-states-require-the-sat/
 - https://www.statology.org/what-is-a-strong-correlation/
 
-___
+<a name="3.0-Data-Dictionary"></a>
 ## 3.0 Data Dictionary
 ---
 |Feature|Type|Dataset|Description|
