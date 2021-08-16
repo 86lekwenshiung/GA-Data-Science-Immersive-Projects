@@ -12,7 +12,7 @@ Problem Statement
 `Question (Problem Statement)`
 * As a specialist in an established property and interior design team in Millenium Walk, how might we be able to use our housing prediction models to provide advise to house seller on which features to improve within their renovation spending budget , so that they are able to optimise their selling price between 5% to 10% from their current baseline Sale Price.
 
-
+<a name = 'content_page'></a>
 ## Table of contents
 * [Fast Fact on Ames City](#General-Info)
 * [Datasets](#Data-Dictionary)
@@ -20,10 +20,11 @@ Problem Statement
 * [Model's Result Summary](#Summary)
 * [Key Observation](#Observation)
 * [Application on Models on Client's Case Study](#Application)
-* [Conclusion & Next Step](#Conclusion]
+* [Conclusion & Next Step](#Conclusion)
 
 <a name = 'General-Info'></a>
 ## Fast Fact on Ames
+___
 
 
 <a name = 'Data-Dictionary'></a>
@@ -38,7 +39,7 @@ The data used for this project are from the following sources:
 - Additional Dataset for Feature Prediction
 
 <a name = 'Model'></a>
-## Regression Models
+## Regression Models & Results
 ___
 * Linear Regression
 * Lasso Regression
@@ -46,11 +47,6 @@ ___
 * ElasticNet
 * Random Forest Regression
 
-<a name = 'Summary'></a>
-## Model's Result Summary
-___
-
-* Include qualitative intepretation of these many decimal number
 |  | LR Score | Lasso Score | Ridge Score | Elastic Net | RandomForest Score |
 |---:|---:|---:|---:|---:|---:|
 | Training MAE | 0.076062 | 0.109778 | 0.076030 | 0.109778 | 0.036248 |
@@ -59,6 +55,12 @@ ___
 | Validation RMSE | 0.103474 | 0.147447 | 0.102304 | 0.147447 | 0.104506 |
 | Training Model Score | 0.931745 | 0.853255 | 0.931058 | 0.853255 | 0.982378 |
 | Validation Model Score | 0.924523 | 0.846741 | 0.926221 | 0.846741 | 0.923011 |
+
+<a name = 'Summary'></a>
+## Summary Intepretation on Model Results
+___
+* Include qualitative intepretation of these many decimal number
+
 
 <a name = 'Observation'></a>
 ## Key Observation from Analysis
@@ -77,6 +79,8 @@ ___
 <a name = 'Conclusion'></a>
 ## Conclusion & Next Step
 ___
+[(back to top)](#content_page)
+
 * Actual Qualitative Application
     1. In the `Section 6.0` Example , we were able to use our client baseline house condition, together with our Model to demostrate how variation of the feature affect the Sale Price. From `Section 6.2` , we had demostrate that if Alan (our client) were to renovate and improve his house condition from 5 to 7 , we predict he should be able to increase his Sale Price from `$270,000` to `$292,000` , a 8% potential increase.
     2. Overall , we were able to generate a model to advise our client what house features they could improve , and the qualitative correlation to the Sale Price. We could use our model to run on multiple features that had demostrated strong relation as demostrated in `Section 6.2` and `Section 6.3`
