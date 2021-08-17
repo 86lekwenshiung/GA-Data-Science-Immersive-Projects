@@ -1,4 +1,4 @@
-# Project 2 - Ames Housing Data and Kaggle Challenge 
+# Project 2 - Ames Housing Data and Kaggle Challenge
 (ReadMe : Work In Progress)
 (Main Readme : Done)
 (Ppt : Work In Progress)
@@ -79,6 +79,7 @@ Problem Statement
 [(back to top)](#content_page)
 
 1. We establish the baseline score for our client model, in this example , the key features as show:
+
 |  | LR Score | Lasso Score | Ridge Score | Elastic Net | RandomForest Score |
 |---|---|---|---|---|---|
 | Training MAE | 0.075675 | 0.076120 | 0.075868 | 0.076094 | 0.035783 |
@@ -89,15 +90,15 @@ Problem Statement
 | Validation Model Score | 0.933157 | 0.936069 | 0.936593 | 0.936950 | 0.925127 |
 2. Using Our Model , we are able to demostrate the qualitative impact of improving a feature score ; in this example , the house and garage condition
 3. Example of Qualitatative Impact:
-![](https://github.com/86lekwenshiung/GA-Data-Science-Immersive-Projects/AMES Housing Price Prediction(P2)/images/House_cond.png)
+![](AMES Housing Price Prediction(P2)/images/House_cond.png)
 
 <a name = 'Conclusion'></a>
 ## Conclusion & Next Step
 [(back to top)](#content_page)
 
 * Actual Qualitative Application
-    1. In the `Section 6.0` Example , we were able to use our client baseline house condition, together with our Model to demostrate how variation of the feature affect the Sale Price. From `Section 6.2` , we had demostrate that if Alan (our client) were to renovate and improve his house condition from 5 to 7 , we predict he should be able to increase his Sale Price from `$270,000` to `$292,000` , a 8% potential increase.
-    2. Overall , we were able to generate a model to advise our client what house features they could improve , and the qualitative correlation to the Sale Price. We could use our model to run on multiple features that had demostrated strong relation as demostrated in `Section 6.2` and `Section 6.3`
+    1. In the `Section 6.0` Example , we were able to use our client baseline house condition, together with our Model to demostrate how variation of the feature affect the Sale Price. From `Section 6.2` , we had demonstrate that if Alan (our client) were to renovate and improve his house condition from 5 to 7 , we predict he should be able to increase his Sale Price from `$270,000` to `$292,000` , a 8% potential increase.
+    2. Overall , we were able to generate a model to advise our client what house features they could improve , and the qualitative correlation to the Sale Price. We could use our model to run on multiple features that had demonstrated strong relation as demonstrated in `Section 6.2` and `Section 6.3`
     3. We had also reached our model's target to be able to advise our client on what action to take on their house so that they are able to increase their selling price by 5% to 10%.
 
 * Next Step
@@ -106,27 +107,3 @@ Problem Statement
 <a name = 'Credits'></a>
 ## Credits and Resources
 [(back to top)](#content_page)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
