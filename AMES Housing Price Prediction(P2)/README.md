@@ -1,4 +1,7 @@
-# Project 2 - Ames Housing Data and Kaggle Challenge (Work In Progress)
+# Project 2 - Ames Housing Data and Kaggle Challenge 
+(ReadMe : Work In Progress)
+(Main Readme : Done)
+(Ppt : Work In Progress)
 
 ___
 Problem Statement
@@ -21,26 +24,27 @@ Problem Statement
 * [Key Observation](#Observation)
 * [Application on Models on Client's Case Study](#Application)
 * [Conclusion & Next Step](#Conclusion)
+* [Credits and Resources](#Credits)
 
 <a name = 'General-Info'></a>
 ## Fast Fact on Ames
-___
+[(back to top)](#content_page)
 
 
 <a name = 'Data-Dictionary'></a>
 ## Datasets and Data Dictionary
-___
-The data used for this project are from the following sources:
+[(back to top)](#content_page)
+* The data used for this project are from the following sources:
 
-- DataSet :
-- Data Dictionary:
-- Training Dataset
-- Test Dataset
-- Additional Dataset for Feature Prediction
+- DataSet :[AMES Housing Dataset](https://www.kaggle.com/c/dsi-us-11-project-2-regression-challenge/data)
+- Data Dictionary:[AMES Housing Set Dictionary](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt)
+- Training Dataset : 2051 Rows x 81 Features
+- Test Dataset : 878 Rows x 80 Features
+- Additional Test Dataset for Case Studies : 70 Rows x 80 Features , 25 Rows x 80 Features
 
 <a name = 'Model'></a>
 ## Regression Models & Results
-___
+[(back to top)](#content_page)
 * Linear Regression
 * Lasso Regression
 * Ridge Regression
@@ -48,29 +52,31 @@ ___
 * Random Forest Regression
 
 |  | LR Score | Lasso Score | Ridge Score | Elastic Net | RandomForest Score |
-|---:|---:|---:|---:|---:|---:|
-| Training MAE | 0.076062 | 0.109778 | 0.076030 | 0.109778 | 0.036248 |
-| Validation MAE | 0.078828 | 0.106090 | 0.077622 | 0.106090 | 0.075616 |
-| Training RMSE | 0.104159 | 0.152725 | 0.104681 | 0.152725 | 0.052925 |
-| Validation RMSE | 0.103474 | 0.147447 | 0.102304 | 0.147447 | 0.104506 |
-| Training Model Score | 0.931745 | 0.853255 | 0.931058 | 0.853255 | 0.982378 |
-| Validation Model Score | 0.924523 | 0.846741 | 0.926221 | 0.846741 | 0.923011 |
+|---|---|---|---|---|---|
+| Training MAE | 0.075675 | 0.076120 | 0.075868 | 0.076094 | 0.035783 |
+| Validation MAE | 0.075682 | 0.074083 | 0.074132 | 0.073673 | 0.075893 |
+| Training RMSE | 0.104065 | 0.104905 | 0.104630 | 0.104878 | 0.052334 |
+| Validation RMSE | 0.097977 | 0.095820 | 0.095426 | 0.095157 | 0.103696 |
+| Training Model Score | 0.930951 | 0.929832 | 0.930199 | 0.929868 | 0.982537 |
+| Validation Model Score | 0.933157 | 0.936069 | 0.936593 | 0.936950 | 0.925127 |
 
 <a name = 'Summary'></a>
 ## Summary Intepretation on Model Results
-___
-* Include qualitative intepretation of these many decimal number
+[(back to top)](#content_page)
+* 4 of 5 models performed relatively well with respect to the Validation Dataset , generally not overfitting (Except for RF).
+* Validation RMSE in the range of 0.093 - 0.104. This means that on average, my predicted value is 9.74% - 10.9% away from my actual results.
+* On Average, my predicted value will be $17810 to $18840 away from my actual results , depending on the model used.
 
 
 <a name = 'Observation'></a>
 ## Key Observation from Analysis
-___
+[(back to top)](#content_page)
 
 * To list down key features from
 
 <a name = 'Observation'></a>
 ## Application on Models on Client's Case Study
-___
+[(back to top)](#content_page)
 
 * To list down how to use the model to predict
 * what feature we used.
@@ -78,7 +84,6 @@ ___
 
 <a name = 'Conclusion'></a>
 ## Conclusion & Next Step
-___
 [(back to top)](#content_page)
 
 * Actual Qualitative Application
@@ -89,8 +94,9 @@ ___
 * Next Step
     * `While we are able to predict qualitatively , we should also take into account that to improve a house feature, renovation budget will be required. Whether that outweighs the increase of SalePrice is not covered in this studies and could be further studies together with interior design team.`
 
-
-
+<a name = 'Credits'></a>
+## Credits and Resources
+[(back to top)](#content_page)
 
 
 
