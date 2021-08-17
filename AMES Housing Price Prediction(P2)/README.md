@@ -64,8 +64,8 @@ Problem Statement
 ## Summary Intepretation on Model Results
 [(back to top)](#content_page)
 * 4 of 5 models performed relatively well with respect to the Validation Dataset , generally not overfitting (Except for RF).
-* Validation RMSE in the range of 0.093 - 0.104. This means that on average, my predicted value is 9.74% - 10.9% away from my actual results.
-* On Average, my predicted value will be $17810 to $18840 away from my actual results , depending on the model used.
+* Validation RMSE in the range of 0.093 - 0.104. This means that on average, the predicted value is 9.74% - 10.9% away from my actual results.
+* On Average, the predicted value will be $17810 to $18840 away from the actual results , depending on the model used.
 
 
 <a name = 'Observation'></a>
@@ -78,9 +78,18 @@ Problem Statement
 ## Application on Models on Client's Case Study
 [(back to top)](#content_page)
 
-* To list down how to use the model to predict
-* what feature we used.
-* how to interpret
+1. We establish the baseline score for our client model, in this example , the key features as show:
+|  | LR Score | Lasso Score | Ridge Score | Elastic Net | RandomForest Score |
+|---|---|---|---|---|---|
+| Training MAE | 0.075675 | 0.076120 | 0.075868 | 0.076094 | 0.035783 |
+| Validation MAE | 0.075682 | 0.074083 | 0.074132 | 0.073673 | 0.075893 |
+| Training RMSE | 0.104065 | 0.104905 | 0.104630 | 0.104878 | 0.052334 |
+| Validation RMSE | 0.097977 | 0.095820 | 0.095426 | 0.095157 | 0.103696 |
+| Training Model Score | 0.930951 | 0.929832 | 0.930199 | 0.929868 | 0.982537 |
+| Validation Model Score | 0.933157 | 0.936069 | 0.936593 | 0.936950 | 0.925127 |
+2. Using Our Model , we are able to demostrate the qualitative impact of improving a feature score ; in this example , the house and garage condition
+3. Example of Qualitatative Impact:
+![](https://github.com/86lekwenshiung/GA-Data-Science-Immersive-Projects/AMES Housing Price Prediction(P2)/images/House_cond.png)
 
 <a name = 'Conclusion'></a>
 ## Conclusion & Next Step
