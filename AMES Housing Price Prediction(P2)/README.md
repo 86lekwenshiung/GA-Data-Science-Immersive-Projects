@@ -80,17 +80,21 @@ Problem Statement
 
 1. We establish the baseline score for our client model, in this example , the key features as show:
 
-|  | LR Score | Lasso Score | Ridge Score | Elastic Net | RandomForest Score |
-|---|---|---|---|---|---|
-| Training MAE | 0.075675 | 0.076120 | 0.075868 | 0.076094 | 0.035783 |
-| Validation MAE | 0.075682 | 0.074083 | 0.074132 | 0.073673 | 0.075893 |
-| Training RMSE | 0.104065 | 0.104905 | 0.104630 | 0.104878 | 0.052334 |
-| Validation RMSE | 0.097977 | 0.095820 | 0.095426 | 0.095157 | 0.103696 |
-| Training Model Score | 0.930951 | 0.929832 | 0.930199 | 0.929868 | 0.982537 |
-| Validation Model Score | 0.933157 | 0.936069 | 0.936593 | 0.936950 | 0.925127 |
-2. Using Our Model , we are able to demostrate the qualitative impact of improving a feature score ; in this example , the house and garage condition
+| Feature (Curent State of House) | Description |
+|---|---|
+| Neighborhood | NridgHT |
+| House Style  | 2 Story |
+| Living Area  | 1,904 SF |
+| Functional  | Typical |
+| Air Con  | Yes |
+| Current House Cond | 5 |
+| Current House QC | 8 |
+| Current Garage Cond | Typical Average |
+| Current Garage QC | Typical Average |
+
+2. Using Our Model , we are able to demonstrate the qualitative impact of improving a feature score ; in this example , the house and garage condition
 3. Example of Qualitatative Impact:
-![](AMES Housing Price Prediction(P2)/images/House_cond.png)
+![](images/House_cond.png)
 
 <a name = 'Conclusion'></a>
 ## Conclusion & Next Step
