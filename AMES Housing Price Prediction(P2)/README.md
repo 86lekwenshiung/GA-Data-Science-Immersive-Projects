@@ -77,7 +77,7 @@ The data used for this project are from the following sources:
 - Instead , we will study into features that could be physically implemented and improved upon such as House QC and cond , Garage QC and cond , Kitchen QC, etc.
 
 <p align = 'center'>
-    <img src = 'ridge_feature/House_cond.png' height="50%" width="50%">
+    <img src = 'images/ridge_feature.png' height="50%" width="50%">
 </p>
 
 <a name = 'Application'></a>
