@@ -1,7 +1,4 @@
 # Project 2 - Ames Housing Data and Kaggle Challenge
-(ReadMe : Work In Progress)
-(Main Readme : Done)
-(Ppt : Work In Progress)
 
 ___
 Problem Statement
@@ -16,24 +13,24 @@ Problem Statement
 <a name = 'content_page'></a>
 ## Table of contents
 * [Fast Fact on Ames City](#General-Info)
-* [Datasets](#Data-Dictionary)
-* [Regression Models](#Model)
-* [Model's Result Summary](#Summary)
-* [Key Observation](#Observation)
+* [Datasets and Data Dictionary](#Data-Dictionary)
+* [Buidling our Regression Models](#Model)
+* [What those number tell us and how we used them for our Business Case?](#Summary)
+* [Key House Feature Observation from Models](#Observation)
 * [Applying Models on Client's Business Case](#Application)
 * [Conclusion & Next Step](#Conclusion)
-* [Credits and Resources](#Credits)
 
 <a name = 'General-Info'></a>
 ## Fast Fact on Ames
 [(back to top)](#content_page)
 
+[AMES City Quickfact from US Census Bureau](https://www.census.gov/quickfacts/amescityiowa)
 
 <a name = 'Data-Dictionary'></a>
 ## Datasets and Data Dictionary
 [(back to top)](#content_page)
-* The data used for this project are from the following sources:
 
+The data used for this project are from the following sources:
 - DataSet :[AMES Housing Dataset](https://www.kaggle.com/c/dsi-us-11-project-2-regression-challenge/data)
 - Data Dictionary:[AMES Housing Set Dictionary](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt)
 - Training Dataset : 2051 Rows x 81 Features
@@ -41,7 +38,7 @@ Problem Statement
 - Test Dataset for Business Case : 70 Rows x 80 Features , 25 Rows x 80 Features
 
 <a name = 'Model'></a>
-## Regression Models & Results
+## Buidling our Regression Models
 [(back to top)](#content_page)
 * Linear Regression
 * Lasso Regression
@@ -62,16 +59,26 @@ Problem Statement
 ## What those number tell us and how we used them for our Business Case?
 [(back to top)](#content_page)
 * 4 of 5 models performed relatively well with respect to the Validation Dataset , generally not overfitting (Except for RF).
-* Validation RMSE in the range of 0.093 - 0.104. This means that on average, the predicted value will be 9.74% - 10.9% away from my actual results.
+* Validation RMSE in the range of 0.093 - 0.104. This means that on average, the predicted value will be 9.74% - 10.9% away from the actual results.
 * On Average, the predicted value will be $17810 to $18840 away from the actual results , depending on the model used.
+* Putting these numbers in perspective:
+    - AMES Median House Value is $205,900.
+    - Mean Sale Price from our dataset is $187,000.
+    - For the Business Case studies , our client Current House Value is forecasted at $277,000.
 * These numbers give us a high confidence in our models to be used for business case studies. In this study, we will use our Rigde Model to advise our client.
 
 
 <a name = 'Observation'></a>
-## Key Observation from Models?
+## Key House Feature Observation from Models
 [(back to top)](#content_page)
 
-* To list down key features from
+- Base on our model , there are many features that have strong correlation with respect to the Sale Price. However in the **standpoint of a seller in our business study** , many of these numeric feature are already cast in stone and not wise to varies (Size related features : House Size , Lot Area)
+
+- Instead , we will study into features that could be physically implemented and improved upon such as House QC and cond , Garage QC and cond , Kitchen QC, etc.
+
+<p align = 'center'>
+    <img src = 'ridge_feature/House_cond.png' height="50%" width="50%">
+</p>
 
 <a name = 'Application'></a>
 ## Applying Models on Client's Business Case
@@ -92,20 +99,22 @@ Problem Statement
 | Current Garage QC | Typical Average |
 
 2. Using our Model , we are able to demonstrate the qualitative impact of improving a feature score ; in this Business Case , the house and garage condition.
-3. Base on our client's renovation budget , we had proposed him to improve his house and garage condition and advised the corresponding impact:
+3. Base on our client's renovation budget , we had proposed him to improve his house and garage condition and advised the corresponding impact. That is a predicted 9% and 3% increase in Sale Price respectively by taking action individually on this feature.
 
-| Client Current House Cond |  Client Current House QC | Predicted Sale Price <br>(Current) |
+| House Cond<br>(Client's Current) | House QC<br>(Client's Current) | Predicted Sale Price <br>(Current) |
 |:---:|:---:|:---:|
 | 8 | 5 | $277,000 |
-| Proposed House Cond | Proposed House QC | Predicted Sale Price <br>(Proposed) |
+| House Cond<br>(Proposed) | House QC<br>(Proposed) | Predicted Sale Price <br>(Proposed) |
 | 9 | 6 | $298,000 |
 
-| Client Current Garage Cond |  Client Current Garage QC | Predicted Sale Price <br>(Current) |
+| Garage Cond<br>(Client's Current) | Garage QC<br>(Client's Current) | Predicted Sale Price <br>(Current) |
 |:---:|:---:|:---:|
-| Average | Average | $277,000 |
-| Proposed Garage Cond | Proposed Garage QC | Predicted Sale Price <br>(Proposed) |
-| Good | Good | $285,000 |
+| 8 | 5 | $277,000 |
+| Garage Cond<br>(Proposed) | GarageQC<br>(Proposed) | Predicted Sale Price <br>(Proposed) |
+| 9 | 6 | $285,000 |
 
+4. So what if our client had more budget? Well we could give him a range of option to consider.
+5. Given sufficient discussion time , we could also explore more feature and advise our client accordingly.
 <p align = 'center'>    
     <img src = 'images/House_cond.png' height="49%" width="49%"> 
     <img src = 'images/Garage_cond.png' height="49%" width="49%">
@@ -115,9 +124,8 @@ Problem Statement
 ## Conclusion & Next Step
 [(back to top)](#content_page)
 
-
-* While we are able to predict qualitatively , we should also take into account that to improve a house feature, renovation budget will be required. Whether that outweighs the increase of SalePrice is not covered in this studies and could be further studies together with interior design team.
+* With our model low RMSE error and good performance in predicting the Sale Price from the features (Not overfitting), this model is able to give an accurate qualitative overview to our client the potential in improving their house features before selling off.
+* While we are able to predict qualitatively , we should also take into account that to improve a house feature, renovation budget will be required. Whether that outweighs the increase of SalePrice is not covered in this studies.
+* Further ROI component , where it take in both renovation cost , as well as expected increase in Sale Price could be further study so that client is able to make a more informed decision before taking physical action.
 
 <a name = 'Credits'></a>
-## Credits and Resources
-[(back to top)](#content_page)
