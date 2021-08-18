@@ -95,7 +95,7 @@ Problem Statement
 
 |House features|Garage Features|
 |---|---|
-|![](images/House_cond.png = 250x)|![](images/House_cond.png = 250x)|
+![](images/House_cond.png = 250x)|![](images/House_cond.png = 250x)
 
 
 <a name = 'Conclusion'></a>
