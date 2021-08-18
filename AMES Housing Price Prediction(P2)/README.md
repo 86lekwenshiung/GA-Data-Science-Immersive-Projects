@@ -93,7 +93,7 @@ Problem Statement
 2. Using Our Model , we are able to demonstrate the qualitative impact of improving a feature score ; in this example , the house and garage condition
 3. Example of Qualitatative Impact:
 
-![](images/House_cond.png) ![](images/House_cond.png)
+![](images/House_cond.png = 250x) ![](images/House_cond.png = 120x)
 
 
 <a name = 'Conclusion'></a>
