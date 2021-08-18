@@ -6,10 +6,8 @@
 ___
 Problem Statement
 ---
-`Situation`
+`Situation and Complication`
 * Alan Walker is a single , aspiring , working mid-profession currently living in Ames City. Like many of his peers in the working profession archetype, he is at a crossroad where he is looking to sell off his current house, so that he have sufficient capital to relocate to a bigger house to establish his new and impending growing family.
-
-`Complication`
 * Facing the financial challenge from their upcoming major life events (weddings , kids , new house, etc) , they often troubled over ways to optimise the selling price of their current house so as to lessen the finanicial burden arising from these events.
 
 `Question (Problem Statement)`
@@ -40,7 +38,7 @@ Problem Statement
 - Data Dictionary:[AMES Housing Set Dictionary](http://jse.amstat.org/v19n3/decock/DataDocumentation.txt)
 - Training Dataset : 2051 Rows x 81 Features
 - Test Dataset : 878 Rows x 80 Features
-- Additional Test Dataset for Case Studies : 70 Rows x 80 Features , 25 Rows x 80 Features
+- Test Dataset for Business Case : 70 Rows x 80 Features , 25 Rows x 80 Features
 
 <a name = 'Model'></a>
 ## Regression Models & Results
@@ -61,7 +59,7 @@ Problem Statement
 | Validation Model Score | 0.933157 | 0.936069 | 0.936593 | 0.936950 | 0.925127 |
 
 <a name = 'Summary'></a>
-## Summary Intepretation on Model Results
+## What those number tell us?
 [(back to top)](#content_page)
 * 4 of 5 models performed relatively well with respect to the Validation Dataset , generally not overfitting (Except for RF).
 * Validation RMSE in the range of 0.093 - 0.104. This means that on average, the predicted value is 9.74% - 10.9% away from my actual results.
@@ -69,13 +67,13 @@ Problem Statement
 
 
 <a name = 'Observation'></a>
-## Key Observation from Analysis
+## Key Observation from Models?
 [(back to top)](#content_page)
 
 * To list down key features from
 
 <a name = 'Observation'></a>
-## Application on Models on Client's Case Study
+## Application on Models on Client's Business Case
 [(back to top)](#content_page)
 
 1. We establish the baseline score for our client model, in this example , the key features as show:
@@ -94,19 +92,17 @@ Problem Statement
 
 2. Using Our Model , we are able to demonstrate the qualitative impact of improving a feature score ; in this example , the house and garage condition
 3. Example of Qualitatative Impact:
-![](images/House_cond.png)
+
+|House features|Garage Features|
+|![](images/House_cond.png = 250x)|![](images/House_cond.png = 250x)|
+
 
 <a name = 'Conclusion'></a>
 ## Conclusion & Next Step
 [(back to top)](#content_page)
 
-* Actual Qualitative Application
-    1. In the `Section 6.0` Example , we were able to use our client baseline house condition, together with our Model to demostrate how variation of the feature affect the Sale Price. From `Section 6.2` , we had demonstrate that if Alan (our client) were to renovate and improve his house condition from 5 to 7 , we predict he should be able to increase his Sale Price from `$270,000` to `$292,000` , a 8% potential increase.
-    2. Overall , we were able to generate a model to advise our client what house features they could improve , and the qualitative correlation to the Sale Price. We could use our model to run on multiple features that had demonstrated strong relation as demonstrated in `Section 6.2` and `Section 6.3`
-    3. We had also reached our model's target to be able to advise our client on what action to take on their house so that they are able to increase their selling price by 5% to 10%.
 
-* Next Step
-    * `While we are able to predict qualitatively , we should also take into account that to improve a house feature, renovation budget will be required. Whether that outweighs the increase of SalePrice is not covered in this studies and could be further studies together with interior design team.`
+* While we are able to predict qualitatively , we should also take into account that to improve a house feature, renovation budget will be required. Whether that outweighs the increase of SalePrice is not covered in this studies and could be further studies together with interior design team.
 
 <a name = 'Credits'></a>
 ## Credits and Resources
