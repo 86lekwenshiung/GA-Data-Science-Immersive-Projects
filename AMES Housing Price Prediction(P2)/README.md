@@ -94,7 +94,7 @@ Problem Statement
 3. Example of Qualitatative Impact:
 
 <p align = 'center'>
-    <img src = 'images/House_cond.png' height="45%" width="45%"> 
+    <img src = 'images/House_cond.png' height="47%" width="47%"> 
     <img src = 'images/Garage_cond.png' height="50%" width="50%">
 </p>
 
