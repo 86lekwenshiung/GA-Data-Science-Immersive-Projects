@@ -20,7 +20,7 @@ Problem Statement
 * [Regression Models](#Model)
 * [Model's Result Summary](#Summary)
 * [Key Observation](#Observation)
-* [Application on Models on Client's Case Study](#Application)
+* [Applying Models on Client's Business Case](#Application)
 * [Conclusion & Next Step](#Conclusion)
 * [Credits and Resources](#Credits)
 
@@ -59,11 +59,12 @@ Problem Statement
 | Validation Model Score | 0.933157 | 0.936069 | 0.936593 | 0.936950 | 0.925127 |
 
 <a name = 'Summary'></a>
-## What those number tell us?
+## What those number tell us and how we used them for our Business Case?
 [(back to top)](#content_page)
 * 4 of 5 models performed relatively well with respect to the Validation Dataset , generally not overfitting (Except for RF).
-* Validation RMSE in the range of 0.093 - 0.104. This means that on average, the predicted value is 9.74% - 10.9% away from my actual results.
+* Validation RMSE in the range of 0.093 - 0.104. This means that on average, the predicted value will be 9.74% - 10.9% away from my actual results.
 * On Average, the predicted value will be $17810 to $18840 away from the actual results , depending on the model used.
+* These numbers give us a high confidence in our models to be used for business case studies. In this study, we will use our Rigde Model to advise our client.
 
 
 <a name = 'Observation'></a>
@@ -72,13 +73,13 @@ Problem Statement
 
 * To list down key features from
 
-<a name = 'Observation'></a>
-## Application on Models on Client's Business Case
+<a name = 'Application'></a>
+## Applying Models on Client's Business Case
 [(back to top)](#content_page)
 
 1. We establish the baseline score for our client model, in this example , the key features as show:
 
-| Feature (Curent State of House) | Description |
+| Client's Current House Info | Description |
 |---|---|
 | Neighborhood | NridgHT |
 | House Style  | 2 Story |
@@ -90,12 +91,24 @@ Problem Statement
 | Current Garage Cond | Typical Average |
 | Current Garage QC | Typical Average |
 
-2. Using Our Model , we are able to demonstrate the qualitative impact of improving a feature score ; in this example , the house and garage condition
-3. Example of Qualitatative Impact:
+2. Using our Model , we are able to demonstrate the qualitative impact of improving a feature score ; in this Business Case , the house and garage condition.
+3. Base on our client's renovation budget , we had proposed him to improve his house and garage condition and advised the corresponding impact:
 
-<p align = 'center'>
-    <img src = 'images/House_cond.png' height="47%" width="47%"> 
-    <img src = 'images/Garage_cond.png' height="50%" width="50%">
+| Client Current House Cond |  Client Current House QC | Predicted Sale Price <br>(Current) |
+|:---:|:---:|:---:|
+| 8 | 5 | $277,000 |
+| Proposed House Cond | Proposed House QC | Predicted Sale Price <br>(Proposed) |
+| 9 | 6 | $298,000 |
+
+| Client Current Garage Cond |  Client Current Garage QC | Predicted Sale Price <br>(Current) |
+|:---:|:---:|:---:|
+| Average | Average | $277,000 |
+| Proposed Garage Cond | Proposed Garage QC | Predicted Sale Price <br>(Proposed) |
+| Good | Good | $285,000 |
+
+<p align = 'center'>    
+    <img src = 'images/House_cond.png' height="49%" width="49%"> 
+    <img src = 'images/Garage_cond.png' height="49%" width="49%">
 </p>
 
 <a name = 'Conclusion'></a>
